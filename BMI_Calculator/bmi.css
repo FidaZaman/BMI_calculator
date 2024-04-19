@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body{
+    background-color: #0093E9;
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+body .container{
+    width: 400px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.container h1{
+    color: bisque;
+    grid-column: 1/3;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.container input{
+    padding: 10px;
+    margin: 5px;
+    border-radius: 10px;
+    font-size: 15px;
+    outline: none;
+    border: none;
+    color: #484848;
+}
+.container input.weight{
+    grid-column: 1/3;
+    grid-row: 2/2;
+}
+.container input.calculate{
+    grid-row: 4/5;
+    grid-column: 1/3;
+    background-color: #6afff3;
+    cursor: pointer;
+}
+.container input.calculate:hover{
+    background-color: #6affba;
+}
+body .border{
+    width: 500px;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-image: linear-gradient(45deg, #00e1ff8f, #bbff006b);
+    background-size: 400% 400%;
+    animation: gradient 5s ease infinite;
+    box-shadow:0px 0px 10px #2b1e1e31;
+}
+@keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+}
+
+
+.result{
+    margin:15px 0;
+    font-size: 17px;
+    color: rgb(0, 59, 59);
+}
+img#bmi-chart{
+    display: none;
+}
+.chart{
+    width: 90px;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    background-color:rgb(32, 117, 75);
+    color: #f1f1f1;
+    font-size: 12px;
+    margin-bottom: 10px;
+    display: none;
+    cursor: pointer;
+    position: fixed;
+    right: 30px;
+    bottom: 20px;
+}
+.chart:hover{
+    background-color:rgb(15, 136, 42);
+}
+@media only screen and (max-width: 550px){
+    body .border{
+        width: 95%;
+    }
+    body .container{
+        width: 90%;
+    }
+    #bmi-chart{
+        width: 95%;
+    }
+    .result{
+        font-size: 13px;
+    }
+}

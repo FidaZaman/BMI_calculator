@@ -9,6 +9,7 @@ function result() {
     const chart = document.getElementById("chart");
     // Display the BMI result with interpretation
     let resultText;
+    document.getElementById("result").style.display = "block";
     if (isNaN(bmi)) {
       resultText = "Please enter valid weight, feet, and inch values.";
     } else if (bmi < 18.5) {
